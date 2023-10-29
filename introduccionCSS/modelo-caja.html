@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Seudo Clases</title>
+    <style>
+      * {
+        /*sacamos todo lo que trae por defecto el navegador*/
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .menu {
+        background-color: #0e93d1aa;
+        padding: 10px 0; /*arriba y abajo 10 de padding*/
+      }
+      .menu-nav {
+        list-style: none;
+        padding-left: 10px;
+        margin: 0px;
+      }
+      .menu-nav__item {
+        display: inline-block; /*cambia de forma vertical a horizontal*/
+      }
+      .menu-nav__item a {
+        color: #ffff;
+        text-decoration: none;
+      }
+      /*seudo clases*/
+      /*define el estilo de un estado de un elemento*/
+      .menu-nav__item a:hover {
+        color: aqua;
+      }
+      .menu-nav__item a:active {
+        color: rgb(241, 7, 136);
+      }
+      /*seudo elemento*/
+      /*define el estilo de una parte*/
+      .menu-nav__item a::after {
+        content: " - ";
+      }
+
+      /*Modelos de cajas para menus*/
+      main {
+        width: 100%;
+        height: 300px;
+        border: 10px solid silver;
+        padding: 20px 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <ul class="menu-nav">
+          <li class="menu-nav__item"><a href="">Inicio</a></li>
+          <li class="menu-nav__item"><a href="">Blogs</a></li>
+          <li class="menu-nav__item"><a href="">Trabajos</a></li>
+          <li class="menu-nav__item"><a href="">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Hola mundo</h1>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Eaque tempora perferendis, possimus nostrum nihil accusamus
+          exercitationem laboriosam reprehenderit voluptates soluta ea
+          ut quod fugiat beatae. Neque blanditiis quod consequatur
+          corrupti!
+        </p>
+      </div>
+      <ul>
+        <li>Item</li>
+      </ul>
+    </main>
+  </body>
+</html>
