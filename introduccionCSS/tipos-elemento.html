@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Tipos de Elementos</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      /*Elementos de bloque*/
+      h1,
+      p,
+      div {
+        background: #ccc;
+        padding: 10px;
+        width: 500px;
+        /*display: block por defecto trae los elementos de bloque*/
+        display: inline-block; /*elemento de linea pero tambien de bloque*/
+      }
+      /*Elementos en linea*/
+      a {
+        /*display: inline por defecto trae los elementos de linea*/
+        display: inline-block;
+        color: #fff;
+        background: #000;
+        padding: 10px;
+        height: 50px;
+      }
+      /*dato de los elementos de linea no podemos añadi padding, width, height*/
+    </style>
+  </head>
+  <body>
+    <h1>Hola mundo!</h1>
+    <p>
+      <!--elemento de bloque-->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+      eos sit vero laboriosam porro
+      <a href=""
+        >repellendus reprehenderit beatae praesentium optio
+        nostrum.</a
+      >
+      Nam quaerat nostrum saepe ratione praesentium accusamus dolorum
+      vero distinctio!
+    </p>
+    <div>
+      <!--elemento de bloque-->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Temporibus ut eligendi iusto sapiente illo ipsam non quos odit
+      voluptate expedita, hic earum blanditiis doloremque porro rerum
+      maiores possimus natus corporis.
+      <a href="">Enlace 01</a
+      ><!--elemento de linea-->
+      <a href="">Enlace 02</a>
+    </div>
+  </body>
+</html>
