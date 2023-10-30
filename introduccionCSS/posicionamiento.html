@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Posicionamiento</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .caja {
+        background: rgb(51, 150, 248);
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        /*float: left; para posicionar las cajas*/
+      }
+      .position {
+        /*position por defecto es el static*/
+        background: rgb(27, 206, 36);
+        position: absolute;
+        bottom: 0; /*se mueve abajo de la caja padre*/
+        right: 0; /*se mueve hacia la derecha de la caja padre*/
+        /*position: relative; podemos mover de la posicion relativa, se mantiene o toma de referencia a su anterior espacio*/
+        /*position: absolute; podemos mover de la posicion del navegador, el epacio anterio es ocupado por la siguiente caja*/
+        /*position: fixed; podemos mover de la posicion del navegador, queda una posicion fija cuando hacemos el scroll*/
+        /* left: 200px; */
+        /* top: 100px; */
+      }
+      .caja-padre {
+        margin: 20px;
+        background: rgba(248, 155, 79, 0.959);
+        width: 500px;
+        height: 500px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caja"></div>
+    <div class="caja-padre"><div class="caja position"></div></div>
+    <div class="caja"></div>
+    <div class="caja"></div>
+    <div class="caja"></div>
+    <div class="caja"></div>
+    <div class="caja"></div>
+    <div class="caja"></div>
+  </body>
+</html>
