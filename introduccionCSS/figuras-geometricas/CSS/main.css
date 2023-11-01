@@ -34,3 +34,52 @@ body {
   font-size: 25px;
   font-weight: bold;
 }
+
+/*CONTENEDOR DE Figuras*/
+.figure {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  overflow: hidden; /*repeta el contenedor padre*/
+}
+.box {
+  width: 340px;
+  height: 600px;
+  border: 3px solid rgb(42, 155, 117);
+  border-radius: 10px;
+  margin: 15px;
+  float: left;
+}
+.box-header {
+  background: rgb(51, 196, 148);
+  padding: 15px 0;
+  text-align: center;
+}
+.box-main {
+  text-align: center;
+  padding: 10px 0;
+}
+.box-main__text {
+  font-size: 20px;
+  font-weight: bold;
+}
+.box-main__input {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  display: inline-block; /*nos permite poner margenes*/
+  margin: 10px;
+  padding: 10px;
+  color: rgb(51, 196, 148);
+  border: solid rgb(42, 155, 117);
+}
+.box-main__btn {
+  background: rgb(51, 196, 148);
+  color: #fff;
+  width: 120px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 5px;
+  border-style: none;
+  border-radius: 10px;
+}
