@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Float</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .main {
+        background: rgb(153, 223, 153);
+        width: 90%;
+        margin: auto; /*se centra la caja*/
+        padding: 10px;
+        overflow: hidden; /*coloca el contenido a la caja padre*/
+      }
+      .caja {
+        width: 500px;
+        height: 200px;
+        margin: 20px;
+      }
+      /*float practicamente esta diseñado para poner imagenes a lado de los textos*/
+      .img {
+        float: left;
+        width: auto;
+      }
+      .text {
+        float: left;
+      }
+      /*Estilo para articulo*/
+      .articulo {
+        background: cadetblue;
+        width: 500px;
+        margin: auto;
+        padding: 10px;
+      }
+      .articulo h2 {
+        text-align: center;
+        padding: 10px;
+      }
+      .articulo img {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <div class="caja img">
+        <img
+          src="https://loremflickr.com/g/320/240/paris"
+          alt="imagend de paris"
+          height="200"
+        />
+      </div>
+      <div class="caja text">
+        <h2>Soy un encabezado</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Fugit reprehenderit deleniti ipsa eveniet impedit quis,
+          voluptates accusantium cumque dignissimos obcaecati deserunt
+          non facere corrupti, repudiandae iure sunt fuga ullam aut!
+        </p>
+      </div>
+    </main>
+
+    <article class="articulo">
+      <h2>encabeado del articulo</h2>
+      <img
+        src="https://loremflickr.com/g/320/240/paris"
+        alt="imagend de paris"
+        height="200"
+      />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Velit dolorum quibusdam enim voluptatem accusamus tempora
+        porro quis sit repudiandae eveniet libero debitis beatae a,
+        ratione unde vitae fugiat magni ipsa.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+        ipsam? Temporibus cumque aliquid voluptate aperiam ipsum
+        sapiente est, perferendis nemo adipisci eius minus inventore,
+        obcaecati, possimus itaque aspernatur quam tenetur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+        ipsam? Temporibus cumque aliquid voluptate aperiam ipsum
+        sapiente est, perferendis nemo adipisci eius minus inventore,
+        obcaecati, possimus itaque aspernatur quam tenetur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+        ipsam? Temporibus cumque aliquid voluptate aperiam ipsum
+        sapiente est, perferendis nemo adipisci eius minus inventore,
+        obcaecati, possimus itaque aspernatur quam tenetur!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+        ipsam? Temporibus cumque aliquid voluptate aperiam ipsum
+        sapiente est, perferendis nemo adipisci eius minus inventore,
+        obcaecati, possimus itaque aspernatur quam tenetur!
+      </p>
+    </article>
+  </body>
+</html>
