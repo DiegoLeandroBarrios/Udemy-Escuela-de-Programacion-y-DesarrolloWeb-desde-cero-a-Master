@@ -83,3 +83,10 @@ body {
   border-style: none;
   border-radius: 10px;
 }
+.box-main__btn:hover {
+  background-color: rgb(42, 155, 117);
+  cursor: pointer;
+}
+.box-main__btn:active {
+  background: rgb(55, 182, 140);
+}
