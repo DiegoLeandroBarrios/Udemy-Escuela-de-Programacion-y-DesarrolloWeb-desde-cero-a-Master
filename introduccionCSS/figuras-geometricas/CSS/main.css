@@ -41,9 +41,10 @@ body {
   margin: auto;
   padding: 10px;
   overflow: hidden; /*repeta el contenedor padre*/
+  max-width: 1000px;
 }
 .box {
-  width: 340px;
+  width: 30%;
   height: 600px;
   border: 3px solid rgb(42, 155, 117);
   border-radius: 10px;
@@ -89,4 +90,32 @@ body {
 }
 .box-main__btn:active {
   background: rgb(55, 182, 140);
+}
+
+/*WEB APP RESPONSIVE*/
+
+@media screen and (max-width: 1021px) {
+  .figuras {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 914px) {
+  .box {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 90%;
+    margin: 25px;
+    height: auto;
+  }
+  .header-title {
+    font-size: 25px;
+  }
+  .answer p {
+    font-size: 20px;
+  }
 }
