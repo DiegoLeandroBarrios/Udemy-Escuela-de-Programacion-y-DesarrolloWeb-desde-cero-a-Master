@@ -14,7 +14,13 @@ body {
   font-family: "roboto mono", sans-serif;
   font-size: 400;
 }
-
+.home-body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 .header {
   width: 100%;
   height: 140px;
@@ -65,4 +71,46 @@ body {
   text-decoration: none;
   color: black;
   border-bottom: 1px solid black;
+}
+.nav-link a:hover {
+  color: rgb(37, 125, 224);
+}
+
+/*MAIN DE HOMEE*/
+
+.home-main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100%;
+  background-image: url("../img/cover.png");
+  background-position: center; /*centrar la img*/
+  background-repeat: no-repeat; /*para que no se repita la img*/
+  background-size: cover;
+}
+.main-container {
+  display: grid;
+  grid-column: 2; /*movemos el contenido a la columna 2*/
+  justify-items: center;
+  height: 350px;
+  margin-top: 80px;
+}
+.main-container__text {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: #fff;
+}
+.main-container__link {
+  background-color: rgb(108, 74, 131);
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  height: 45px;
+}
+.main-container__link:hover {
+  color: rgb(37, 125, 224);
 }
