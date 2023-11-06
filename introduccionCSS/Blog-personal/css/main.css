@@ -190,3 +190,54 @@ footer {
 footer p {
   color: #fff;
 }
+/* BLOG */
+.main-blog {
+  padding: 0 80px 40px;
+}
+.main-blog__content img {
+  display: inline-block; /*para colocarle padding y ancho*/
+  padding: 0 50px 40px;
+  width: 100%;
+}
+.blog-content__article {
+  padding: 0 80px 40px;
+}
+.blog-content__article h4 {
+  border-bottom: 1px solid #cdd2da;
+  padding: 20px 0;
+}
+.blog-content__article h1 {
+  margin: 20px 0;
+  font-size: 35px;
+}
+
+/*  SECCION DE CONTACTO*/
+.section-contact {
+  width: 100%;
+  background-color: #e6e9ed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px 50px;
+}
+.contact {
+  display: flex;
+  margin: 20px 0 20px 20px;
+}
+.contact img {
+  width: 100px;
+  display: inline-block;
+  padding: 10px;
+}
+.contact-info {
+  padding: 20px 0;
+  width: 300px;
+}
+.contact-info a {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+.contact-info p {
+  margin-top: 10px;
+}
