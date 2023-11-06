@@ -236,8 +236,11 @@ footer p {
   text-decoration: none;
   color: #000;
   border-bottom: 1px solid #000;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
 }
 .contact-info p {
   margin-top: 10px;
+}
+.contact-info a:hover {
+  color: rgb(37, 125, 224);
 }
