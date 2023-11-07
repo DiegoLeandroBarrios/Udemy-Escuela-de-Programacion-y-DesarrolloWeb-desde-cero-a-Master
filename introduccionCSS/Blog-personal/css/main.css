@@ -244,3 +244,39 @@ footer p {
 .contact-info a:hover {
   color: rgb(37, 125, 224);
 }
+/* PROFILE */
+
+.profile {
+  padding: 70px 100px;
+  background-color: #e6e9ed;
+  margin-bottom: 5px;
+  display: flex;
+}
+.profile img {
+  width: 220px;
+  margin: 30px;
+}
+.profile-info {
+  justify-content: center;
+  margin-top: 130px;
+  word-spacing: 10px;
+}
+.project-container {
+  padding: 0 80px 40px;
+}
+.project-container h3 {
+  border-bottom: 1px solid #cdd2da;
+  padding: 20px 0;
+  text-align: center;
+}
+.project {
+  display: inline-block;
+  padding: 10px;
+}
+.project h4 {
+  margin: 20px 0;
+}
+.project p {
+  margin-bottom: 35px;
+  word-spacing: 10px;
+}
