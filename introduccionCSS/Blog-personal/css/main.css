@@ -280,3 +280,78 @@ footer p {
   margin-bottom: 35px;
   word-spacing: 10px;
 }
+/*media querys*/
+
+@media screen and (max-width: 500px) {
+  /*PAGINA DE INICIO*/
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo,
+  .nav-link {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .nav-logo img {
+    width: 150px;
+  }
+  .main-container__text {
+    font-size: 25px;
+  }
+  /*BLOGS*/
+  .blogs-main {
+    padding: 0;
+  }
+  .news {
+    width: 100%;
+    padding: 15px;
+  }
+  .news-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .news-container img {
+    grid-row: 2;
+  }
+  .news-info {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .news-info h2 {
+    text-align: center;
+  }
+  .pots {
+    width: 100%;
+    padding: 10px;
+  }
+  .spots-blog {
+    max-width: 100%;
+  }
+
+  .spots-blog h4,
+  p {
+    text-align: center;
+  }
+
+  /*PAGINA DE BLOG*/
+  .main-blog {
+    padding: 10px;
+  }
+  .main-blog__content img {
+    padding: 0;
+  }
+  .blog-content__article {
+    padding: 0;
+  }
+  .section-contact {
+    padding: 10px;
+    display: grid;
+  }
+  .contact {
+    display: grid;
+    margin: 0;
+  }
+  /*PERFIL*/
+}
