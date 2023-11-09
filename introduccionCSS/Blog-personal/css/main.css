@@ -354,4 +354,30 @@ footer p {
     margin: 0;
   }
   /*PERFIL*/
+  .profile {
+    padding: 10px;
+    display: grid;
+  }
+  .profile img {
+    width: 80%;
+  }
+  .profile-info {
+    margin: 0;
+  }
+
+  .profile-info h2 {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .profile-info p {
+    font-size: 17px;
+    padding: 10px;
+    text-align: start;
+  }
+  .project-container {
+    padding: 10px;
+  }
+  .project-container p {
+    text-align: start;
+  }
 }
