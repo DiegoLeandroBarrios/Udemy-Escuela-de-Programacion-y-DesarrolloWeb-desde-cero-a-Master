@@ -280,9 +280,9 @@ footer p {
   margin-bottom: 35px;
   word-spacing: 10px;
 }
-/*media querys*/
+/*MEDIA QUERYS DISPOSITIVOS MOVILES*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 840px) {
   /*PAGINA DE INICIO*/
   .nav-logo {
     display: flex;
@@ -349,9 +349,13 @@ footer p {
     padding: 10px;
     display: grid;
   }
+  .section-contact img {
+    width: 30%;
+  }
+
   .contact {
-    display: grid;
     margin: 0;
+    text-align: start;
   }
   /*PERFIL*/
   .profile {
