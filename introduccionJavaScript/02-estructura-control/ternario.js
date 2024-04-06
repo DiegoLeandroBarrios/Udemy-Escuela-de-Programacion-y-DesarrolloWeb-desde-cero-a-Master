@@ -1,4 +1,4 @@
-let n = 8;
+// let n = 8;
 let v = "O";
 // let r = n > 0 ? "Es positivo" : "Es negativo";
 let r =
