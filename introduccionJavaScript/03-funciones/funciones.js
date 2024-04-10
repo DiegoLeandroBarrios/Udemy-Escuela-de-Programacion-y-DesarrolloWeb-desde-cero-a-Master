@@ -11,3 +11,15 @@ const d = saludar("Diego"); //con esto podemos saludar a varias personas o sea s
 const a = saludar("Alex");
 console.log(d);
 console.log(a);
+
+function sumar(a = null, b = null) {
+  //le doy valores predeterminados
+  if (a === null || b === null) {
+    console.log("Error, debes enviar dos numeros a la funcion.");
+    return ""; //con return determinamos donde termina la funcion
+  }
+  return a + b;
+}
+
+const s = sumar(40, 50);
+console.log(s);
