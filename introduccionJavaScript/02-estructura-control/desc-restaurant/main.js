@@ -2,6 +2,7 @@
 Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta s/. 100.00 y un
 descuento del 20% para consumos mayores, para ambos casos se aplica un impuesto del 19%.
 Determinar el monto defidescuento, el impuesto y el importe a pagar.
+
 Practica 02: Descuentos de un restaurante Parte 02
 Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a la
 siguiente escala de consumo, ver la tabla. Determinar el monto del descuento, el importe del impuesto y el
@@ -15,6 +16,7 @@ Descuento (%)
 20
 30
 */
+
 //entrada de datos con funcion prompt
 
 let consumo = Number(prompt("Ingrese el consumo: "));
