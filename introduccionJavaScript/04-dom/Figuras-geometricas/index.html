@@ -72,25 +72,29 @@
           <input
             class="box-main__input"
             type="number"
-            name="side"
-            id="side"
+            name="side1"
+            id="inputSideTriangulo1"
             placeholder="Ingrese lado 01"
           />
           <input
             class="box-main__input"
             type="number"
-            name="side"
-            id="side"
+            name="side2"
+            id="inputSideTriangulo2"
             placeholder="Ingrese lado 02"
           />
           <input
             class="box-main__input"
             type="number"
-            name="side"
-            id="side"
+            name="side3"
+            id="inputSideTriangulo3"
             placeholder="Ingrese lado 03"
           />
-          <button class="box-main__btn" type="button">
+          <button
+            class="box-main__btn"
+            type="button"
+            onclick="calcularPerimTriangulo()"
+          >
             Perímetro
           </button>
 
@@ -101,18 +105,24 @@
             class="box-main__input"
             type="number"
             name="side"
-            id="side"
+            id="base"
             placeholder="Ingrese Base"
           />
           <input
             class="box-main__input"
             type="number"
             name="side"
-            id="side"
+            id="altura"
             placeholder="Ingrese Altura"
           />
 
-          <button class="box-main__btn" type="button">Área</button>
+          <button
+            class="box-main__btn"
+            type="button"
+            onclick="calcularAreaTriangulo()"
+          >
+            Área
+          </button>
         </div>
       </div>
 
@@ -128,16 +138,30 @@
             class="box-main__input"
             type="number"
             name="side"
-            id="side"
+            id="radio"
             placeholder="Ingrese Radio"
           />
-          <button class="box-main__btn" type="button">
+          <button
+            class="box-main__btn"
+            type="button"
+            onclick="calcularDiametro()"
+          >
             Diámetro
           </button>
-          <button class="box-main__btn" type="button">
+          <button
+            class="box-main__btn"
+            type="button"
+            onclick="calcularPerimCirculo()"
+          >
             Perímetro
           </button>
-          <button class="box-main__btn" type="button">Área</button>
+          <button
+            class="box-main__btn"
+            type="button"
+            onclick="calcularAreaCirculo()"
+          >
+            Área
+          </button>
         </div>
       </div>
     </section>
