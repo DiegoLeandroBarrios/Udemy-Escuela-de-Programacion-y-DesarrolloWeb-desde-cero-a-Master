@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
+  output: { clean: true },
   module: {
     rules: [
       {
@@ -14,8 +15,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      templates: "src/index.html",
+      template: "src/index.html", //esta mal config esto conservaba todos los elementos html
       title: "Mi webpack App",
+      filename: "index.html",
     }),
   ],
 };
