@@ -21,6 +21,14 @@ module.exports = {
         test: /main.css$/i, //lo cargamos en la siguiente
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      {
+        test: /\.png/,
+        type: "asset/resource", //se cargan las imagenes png a la distribucion
+        generator: {
+          //nos sirve para la parte de produccion, nos guarda las imagenes en una carpeta static
+          filename: "static/[hash][ext][query]",
+        },
+      },
     ],
   },
   plugins: [
