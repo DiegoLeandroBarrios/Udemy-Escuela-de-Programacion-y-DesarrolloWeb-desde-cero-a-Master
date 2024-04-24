@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: "development",
   output: { clean: true },
@@ -13,7 +14,12 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        exclude: /main.css$/i, //excluimos este archivo css
         use: ["style-loader", "css-loader"], //esto sirve para que me cargue el css en la distribucion
+      },
+      {
+        test: /main.css$/i, //lo cargamos en la siguiente
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
@@ -23,5 +29,10 @@ module.exports = {
       title: "Mi webpack App",
       filename: "index.html",
     }),
+    new MiniCssExtractPlugin({
+      filename: "main.css",
+    }),
   ],
 };
+//NOTAS
+//Ctrl + c para parar servidor.
