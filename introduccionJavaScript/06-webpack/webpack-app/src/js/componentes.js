@@ -1,6 +1,7 @@
 //app para saludar
 //modularizamos una funcion
 //export para que se pueda exportar la funcion
+import "../css/estilos.css";
 export const saludar = (nombre) => {
   console.log("creando etiqueta h1");
   const h1 = document.createElement("h1");

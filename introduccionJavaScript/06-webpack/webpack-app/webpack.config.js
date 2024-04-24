@@ -6,10 +6,14 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: "html-loader", //esto sirve para que me cargue el html en la distribucion
         options: {
           sources: false,
         },
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"], //esto sirve para que me cargue el css en la distribucion
       },
     ],
   },
