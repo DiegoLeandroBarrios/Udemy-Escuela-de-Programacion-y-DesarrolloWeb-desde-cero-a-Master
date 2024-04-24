@@ -1,7 +1,8 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+//estos plugins se sacan de la documentacion de webpack.
+const HtmlWebpackPlugin = require("html-webpack-plugin"); // Conserva los cambios en el html.
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //conserva los cambios que pongamos en el css.
+const TerserPlugin = require("terser-webpack-plugin"); //reduce el tamaño de los archivos js.
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin"); //minificador de css.
 module.exports = {
   mode: "production",
   output: { clean: true, filename: "main.[contenthash].js" }, //filename le da un nombre aleatorio(codigo hash) a las carpetas de la distribucion esto es bueno porque limpia el cache.
@@ -9,25 +10,25 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader", //esto sirve para que me cargue el html en la distribucion
+        loader: "html-loader", //esto sirve para que me cargue el html en la distribucion.
         options: {
           sources: false,
         },
       },
       {
         test: /\.css$/i,
-        exclude: /main.css$/i, //excluimos este archivo css
-        use: ["style-loader", "css-loader"], //esto sirve para que me cargue el css en la distribucion
+        exclude: /main.css$/i, //excluimos este archivo css.
+        use: ["style-loader", "css-loader"], //esto sirve para que me cargue el css en la distribucion.
       },
       {
-        test: /main.css$/i, //lo cargamos en la siguiente
+        test: /main.css$/i, //lo cargamos en la siguiente.
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.png/,
-        type: "asset/resource", //se cargan las imagenes png a la distribucion
+        type: "asset/resource", //se cargan las imagenes png a la distribucion.
         generator: {
-          //nos sirve para la parte de produccion, nos guarda las imagenes en una carpeta static
+          //nos sirve para la parte de produccion, nos guarda las imagenes en una carpeta static.
           filename: "static/[hash][ext][query]",
         },
       },
@@ -45,16 +46,16 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()], //no elimina los espacios en la carpeta css de la distribucion
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()], //nos elimina los espacios en la carpeta css de la distribucion
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html", //esta mal config esto conservaba todos los elementos html
+      template: "src/index.html", //esta mal config, esto conservaba todos los elementos html
       title: "Mi webpack App",
       filename: "index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[fullhash].css",
+      filename: "[name].[fullhash].css", //ponemos un codigo hash para la produccion.
     }),
   ],
 };
