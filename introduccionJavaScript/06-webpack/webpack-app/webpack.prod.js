@@ -31,6 +31,16 @@ module.exports = {
           filename: "static/[hash][ext][query]",
         },
       },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/, //babel es un compilador que ayuda a traducir el codigo en diferentes navegadores.(busca la compatibilidad)
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
     ],
   },
   optimization: {
@@ -50,3 +60,5 @@ module.exports = {
 };
 //NOTAS
 //Ctrl + c para parar servidor.
+//webpack funciona como un empaquetador para la area de produccion.
+//babel es un compilador para que acepte el codigo en todos los navegadores y no haya errores.
