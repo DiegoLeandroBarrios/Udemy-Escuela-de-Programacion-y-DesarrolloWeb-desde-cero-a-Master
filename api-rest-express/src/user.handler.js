@@ -12,5 +12,11 @@ const User = {
     response.status(201); //Dice que esta todo ok
     response.send(saveUser._id); //devolvemos el id para que el cliente vea que esta en la BD
   }, //con este handler recibimos lo que nos envia el cliente.
+  get: async (request, response) => {
+    const { id } = request.params; //guardamos el id de ese objeto
+    const user = await Users.findOne({ _id: id }); //le pedimos un registro(solo un dato) que tenga el mismo id //se guarda en user
+    response.status(200); //Dice que esta todo ok
+    response.send(user); // le devolvemos el usuario que pidio
+  },
 };
 module.exports = User; //exportamos
