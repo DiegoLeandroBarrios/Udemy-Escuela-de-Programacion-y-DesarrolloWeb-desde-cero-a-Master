@@ -18,5 +18,25 @@ const User = {
     response.status(200); //Dice que esta todo ok
     response.send(user); // le devolvemos el usuario que pidio
   },
+  update: async (request, response) => {
+    const { id } = request.params; //obtenemos el id de ese objeto
+    const user = await Users.findOne({ _id: id }); //le pedimos un registro(solo un dato) que tenga el mismo id //se guarda en user
+    //actualizamos datos
+    Object.assign(user, request.body); //le mandamos el usuario que vamos a modificar y lo que cambiamos
+    await user.save(); //guardamos los cambios
+    response.sendStatus(204); //Dice que esta todo ok
+  },
+  delete: async (request, response) => {
+    const { id } = request.params; //obtenemos el id de ese objeto
+    const result = await Users.deleteOne({ _id: id }); //le pedimos un registro(solo un dato) que tenga el mismo id //se para eliminarlo
+    //eliminamos dato
+    if (result.deletedCount === 1) {
+      response.sendStatus(204); //Dice que esta todo ok
+      console.log("Usuario eliminado correctamente.");
+    } else {
+      console.log("usuario no encontrado");
+      response.status(404).send("Usuario no encontrado.");
+    }
+  },
 };
 module.exports = User; //exportamos
