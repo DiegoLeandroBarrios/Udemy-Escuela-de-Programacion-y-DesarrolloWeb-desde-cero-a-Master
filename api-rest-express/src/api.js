@@ -15,6 +15,8 @@ mongoose.connect(
 app.get("/api/", user.list); //llamamos al handler 1
 app.post("/api/", user.create); //llamamos al handler2
 app.get("/api/:id", user.get); //llamamos al handler 3 que nos devulve un usuario con su id
+app.put("/api/:id", user.update);
+app.delete("/api/:id", user.delete);
 
 app.listen(port, () => {
   console.log(`El ejemplo se esta ejecutando en el puerto: ${port}`);
